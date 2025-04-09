@@ -55,6 +55,8 @@ jobs:
           path: target/surefire-reports/*.xml
           reporter: java-junit
           fail-on-error: true
+      - name: Permission
+        run: chmod +x ./scripts/build-image.sh
       # Build the Docker image
       - name: Build the docker image
         run: ./scripts/build-image.sh
