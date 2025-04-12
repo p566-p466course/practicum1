@@ -87,6 +87,7 @@ jobs:
       - name: Push to GitHub Container Registry
         run: ./scripts/push-to-ghcr.sh
 
+
       - name: Push to Azure Container Registry
         run: ./scripts/push-to-acr.sh
 
