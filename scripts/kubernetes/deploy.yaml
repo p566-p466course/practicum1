@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: prime-service
-          image: ${REGISTRY_URL}/prime-service:${VERSION}
+          image: ${REGISTRY_URL}/prime-service:latest
           imagePullPolicy: Always
           envFrom:
             - secretRef:

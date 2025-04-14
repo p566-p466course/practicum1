@@ -4,5 +4,5 @@ set -u
 # Use VERSION from env or default to v1.0.0
 : "${VERSION:=v1.0.0}"
 
-echo "Building Docker image: ghcr.io/krisha34/prime-service:${VERSION}"
-docker build -t ghcr.io/krisha34/prime-service:${VERSION} .
+echo "Building Docker image: ghcr.io/krisha34/prime-service:latest"
+docker build -t ghcr.io/krisha34/prime-service:latest .
