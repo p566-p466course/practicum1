@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: prime-service
-          image: ${REGISTRY_URL}/prime-service:latest
+          image: practicum9krisha.azurecr.io/prime-service:v1.0.0
+
           imagePullPolicy: Always
           envFrom:
             - secretRef:
