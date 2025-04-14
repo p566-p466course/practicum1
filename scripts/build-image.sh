@@ -8,3 +8,4 @@ docker build -t ghcr.io/krisha34/prime-service:latest .
 
 # Add this line 👇
 docker tag ghcr.io/krisha34/prime-service:latest prime-service:latest
+
