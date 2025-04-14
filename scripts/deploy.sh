@@ -5,8 +5,8 @@ set -u  # or set -o nounset
 : "$REGISTRY_URL"
 : "$VERSION"
 : "$DATASOURCE_URL"
-: "$DATASOURCE_USERNAME"
-: "$DATASOURCE_PASSWORD"
+: "$DATASOURCE_UN"
+: "$DATASOURCE_PW"
 
 # Perform environment variable substitution and apply the manifest
 envsubst < ./scripts/kubernetes/deploy.yaml | kubectl apply -f -
