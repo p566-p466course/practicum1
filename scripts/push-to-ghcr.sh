@@ -9,4 +9,6 @@ echo "$ACCESS_TOKEN" | docker login ghcr.io -u krisha34 --password-stdin
 echo "Pushing image to ghcr.io/krisha34/prime-service:${VERSION}..."
 docker tag primes-service:${VERSION} ghcr.io/krisha34/primes-service:${VERSION}
 
+
 docker push ghcr.io/krisha34/primes-service:${VERSION}
+
