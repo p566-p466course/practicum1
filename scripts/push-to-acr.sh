@@ -11,7 +11,7 @@ echo "$REGISTRY_PASSWORD" | docker login "$REGISTRY_URL" -u "$REGISTRY_USERNAME"
 
 # Tag the image built earlier with ACR-specific name
 echo "Tagging image for ACR..."
-docker tag ghcr.io/krisha34/prime-service:$VERSION $REGISTRY_URL/prime-service:$VERSION
+docker tag ghcr.io/krisha34/primes-service:$VERSION $REGISTRY_URL/primes-service:$VERSION
 
 echo "Pushing Docker image to ACR..."
-docker push $REGISTRY_URL/prime-service:$VERSION
+docker push $REGISTRY_URL/primes-service:$VERSION
