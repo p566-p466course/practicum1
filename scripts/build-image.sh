@@ -1,11 +1,13 @@
 #!/bin/bash
-set -u
+set -e
 
 : "${VERSION:=v1.0.0}"
 
-echo "Building Docker image: ghcr.io/krisha34/prime-service:latest"
-docker build -t ghcr.io/krisha34/prime-service:latest .
+echo "Building Docker image..."
+docker build -t prime-service:${VERSION} .  # local base tag
 
-# Add this line 👇
-docker tag ghcr.io/krisha34/prime-service:latest prime-service:latest
+# Tag for GitHub
+docker tag prime-service:${VERSION} ghcr.io/krisha34/prime-service:${VERSION}
 
+# Tag for ACR
+docker tag prime-service:${VERSION} $REGISTRY_URL/prime-service:${VERSION}
